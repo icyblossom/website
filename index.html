@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aishra Krish Rai</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .main{
+            height: 100vh;
+            width: 100vw;
+            background-color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .main a{
+            position: absolute;
+            bottom: 10%;
+            right: 5%;
+            text-decoration: none;
+            color: white;
+            align-items: center;
+        }
+
+        .main a:hover{
+            color: red;
+        }
+
+        .imgContainer{
+            height: 90vh;
+            transition: all 0.6s linear;
+        }
+
+        .imgContainer>img{
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+            filter: drop-shadow(0px 0px 10px rgb(128, 129, 128));
+            transition: all 0.2s linear;
+        }
+
+        .imgContainer>img:hover{
+           transform: scale(1.02);
+        }
+
+        @media (max-width:600px) {
+            .imgContainer{
+                width: 100vw;
+                height: 100vh;
+                overflow: hidden;
+            }
+
+            .imgContainer>img{
+            object-fit: contain;
+        }
+
+
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="imgContainer">
+            <img src="image.png" alt="website under construction">
+        </div>
+        <a href="TicTacToe.html">Play TicTacToe</a>
+    </div>
+</body>
+</html>
