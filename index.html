@@ -14,34 +14,46 @@
             background-color: #000;
         }
 
-        .nav{
+        .SocialHandle{
             color: white;
-            font-size: 1.5rem;
+            font-size: 1rem;
             width: 100vw;
             position: absolute;
-            top: 2%;
-            
+            bottom: 5%;
+            right: 5%;
+            display: flex;
+            justify-content: end;
+            gap: 10px;
         }
 
-        #youtubeText{
+        #youtubeText, #instaText{
             cursor: pointer;
+            font-family: 'Courier New', Courier, monospace;
         }
 
-        .nav .youtube{
+        #youtubeText:hover, #instaText:hover{
+            color: red;
+        }
+        .youtube, .insta{
             display: flex;
             align-items: center;
-            gap: 2px;
-            height: 3rem;
-            width: 5rem;
-            padding: 1rem;
+            gap: 5px;
             position: relative;
             z-index: 1;
-
         }
 
-        .youtube a img{
-            width: 2rem;
-            margin-top: 8px;
+        .youtube a img, .insta a img{
+            width: 1.5rem;
+            margin-top: 5px;
+        }
+
+        .youtube a img:hover{
+            transform: scale(1.3);
+            transition: 0.3s;
+        }
+        .youtube a img:hover, .insta a img:hover{
+            transform: scale(1.3);
+            transition: 0.3s;
         }
         .main{
             height: 100vh;
@@ -100,26 +112,33 @@
     </style>
 </head>
 <body>
-    <div class="nav">
-        
-
-        <div class="youtube">
-            <span id="youtubeText">Youtube</span>
-            <a id="youtubeLink" href="https://youtube.com/@aaishra?si=RoxUhLFUawTNSzmG">
-                <img src="youtube.svg" id="Youtube_link" alt="youtube">
-            </a>
-        </div>
-    </div>
+    
     <div class="main">
         <div class="imgContainer">
             <img src="image.png" alt="website under construction">
         </div>
         <a id="game" href="TicTacToe.html">Play TicTacToe</a>
     </div>
-
+    <div class="SocialHandle">
+        <div class="insta">
+            <span id="instaText">Insta</span>
+            <a id="instaLink" href="https://www.instagram.com/aishrakrishrai?igsh=MXdkcWtqZ3Fmd250dA==">
+                <img src="instagram-fill.svg" id="Youtube_link" alt="youtube">
+            </a>
+        </div>
+        <div class="youtube">
+            <span id="youtubeText">Youtube channel</span>
+            <a id="youtubeLink" href="https://youtube.com/@aaishra?si=RoxUhLFUawTNSzmG">
+                <img src="youtube-fill.svg" id="Youtube_link" alt="youtube">
+            </a>
+        </div>
+    </div>
     <script>
         document.querySelector("#youtubeText").addEventListener('click', function () {
             window.location.href = document.querySelector("#youtubeLink").href;
+        });
+        document.querySelector("#instaText").addEventListener('click', function () {
+            window.location.href = document.querySelector("#instaLink").href;
         });
     </script>
 </body>
